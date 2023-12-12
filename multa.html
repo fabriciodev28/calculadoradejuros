@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://kimnet.com.br/wp-content/uploads/2021/05/Kimnet.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>  
+<body>
+    <div class="container">
+        <h1 class="text-white mt-5 text-center">CALCULADORA</h1>
+        <hr class="text-white">
+
+        <div class="d-flex justify-content-evenly mt-5 mb-5">
+            <a class="" id="negociacao" href="index.html">NEGOCIAÇÕES</a>
+            <a class="" id="linkmulta" href="multa.html">MULTA RESCISÓRIA</a>
+        </div>
+
+        <hr class="text-white">
+        <h5 class="text-white mt-5 text-center"> DIGITE O VALOR DO PLANO:  <input type="number" name="valorPlano" id="valorPlano"></h5>
+        <h5 class="text-white mt-5 text-center">N° PARCELAS RESTANTES:  <input type="number" name="parcelas" id="parcelasRes"></h5>
+        <h5 class="text-white mt-5 text-center">DIAS DE USO:  <input type="number" name="diasDeUso" id="diasDeUso"></h5>
+        <div class="botao">
+            <button onclick="multaRescisoria()" class="">CALCULAR</button>
+        </div>
+        <table class="table table-borderless w-50 m-auto mt-5 text-white">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>A VISTA</th>
+                    <th>CARTÃO</th>
+                    <th>TAXA 4%</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>MULTA</td>
+                <td id="exibir"></td>
+                <td id="credito"></td>
+                <td id="taxa"></td>
+            </tr>
+            <tr>
+                <td>DIAS DE USO</td>
+                <td id="valosDiasDeUso"></td>
+                <td id="diasDeUsoCredito"></td>
+                <td id="taxaDiasDeUso"></td>
+            </tr>
+            <tr>
+                <td>VALOR TOTAL</td>
+                <td id="exibirTotal"></td>
+                <td id="creditoTotal"></td>
+                <td id="taxaTotal"></td>
+            </tr>
+            <tr>
+                <td>3 MENSALIDADES</td>
+                <td id="valor3Mensalidades"></td>
+                <td id="valor3MensalidadesCredito"></td>
+                <td id="valor3MensalidadesTaxa"></td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <img src="Kimnet.png" alt="logo" class="d-none d-md-block m-auto">
+        <footer class=" text-center text-white mt-5">&copy; Fabricio Silva</footer>
+    </div>
+    <script src="interacao.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
