@@ -22,7 +22,7 @@ function atualizar() {
     var atraso = calculaDatas()
 
 
-    if(atraso == 0){
+    if(atraso <= 0){
         var resultado = valor
         exibicao.innerHTML = `R$ ${resultado}`
         credito.innerHTML = `R$ ${ajuste(resultado + (resultado * 4 /100),2)}`
