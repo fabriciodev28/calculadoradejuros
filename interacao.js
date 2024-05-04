@@ -21,10 +21,18 @@ function atualizar() {
     var taxa = document.getElementById('taxa')
     var atraso = calculaDatas()
 
-    var resultado = juros * atraso + multa + valor
-    exibicao.innerHTML = `R$ ${ajuste(resultado,2)}`
-    credito.innerHTML = `R$ ${ajuste(resultado + (resultado * 4 /100),2)}`
-    taxa.innerHTML = `R$ ${ajuste(resultado * 4 / 100, 2)}`
+
+    if(atraso == 0){
+        var resultado = valor
+        exibicao.innerHTML = `R$ ${resultado}`
+        credito.innerHTML = `R$ ${ajuste(resultado + (resultado * 4 /100),2)}`
+        taxa.innerHTML = `R$ ${ajuste(resultado * 4 / 100, 2)}`
+    }else{
+        var resultado = juros * atraso + multa + valor
+        exibicao.innerHTML = `R$ ${ajuste(resultado,2)}`
+        credito.innerHTML = `R$ ${ajuste(resultado + (resultado * 4 /100),2)}`
+        taxa.innerHTML = `R$ ${ajuste(resultado * 4 / 100, 2)}`
+    }
   
     negociar()
 }
